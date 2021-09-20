@@ -17,7 +17,7 @@ function getrepocontent(url, topic) {
 }
 function getissuelink(html2, topic) {
     let $ = cheerio.load(html2);
-    let anchorElem2 = $(".d-flex.flex-auto a[class='text-bold']");
+    let anchorElem2 = $(".d-flex.flex-auto a[class='text-bold wb-break-word']");
     // console.log(anchorElem2.length);
     for (let i = 0; i < 8; i++) {
         let href = $(anchorElem2[i]).attr('href');
